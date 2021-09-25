@@ -177,6 +177,12 @@ img {
   right: 8px;
 }
 
+.button-modal-close:hover,
+button-modal-close:focus {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--timing-function);
+}
+
 .modal-close-icon {
   width: 18px;
   height: 18px;
@@ -242,16 +248,60 @@ img {
 .modal-button {
   display: block;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/*.modal-button:focus {
+  outline: none;
+}*/
 
 .modal-field {
   position: relative;
   margin-bottom: 10px;
 }
 
-.modal-input:hover + .modal-label {
-  color: red;
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--timing-function);
 }
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--accent-color);
+  transition: border-color 250ms var(--timing-function);
+  outline: none;
+}
+
+.modal-comment:hover,
+.modal-comment:focus {
+  border-color: var(--accent-color);
+  transition: border-color 250ms var(--timing-function);
+  outline: none;
+}
+
+/*.button-modal-close:focus .modal-close-icon {
+  outline: none;
+}*/
+
+/*button-modal-close:focus {
+  outline: none;
+}*/
+
+.folow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.folow-button-icon {
+  margin-left: 10px;
+}
+
+.modal-icon:hover {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--timing-function);
+}
+
 .modal-icon {
   position: absolute;
   left: 12px;
@@ -323,6 +373,7 @@ img {
 .modal-check-box {
   margin-top: 10px;
   margin-bottom: 30px;
+  padding-left: 13px;
 }
 
 .modal-p-policy-icon {
