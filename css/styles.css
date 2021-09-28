@@ -158,6 +158,11 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  display: inline-block;
+
+  text-align: left;
+  padding: 40px;
+
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
@@ -190,12 +195,12 @@ button-modal-close:focus {
 }
 
 /*-----modal form---------*/
-.modal-content {
+/*.modal-content {
   display: inline-block;
   position: relative;
   text-align: left;
   padding: 40px;
-}
+}*/
 
 .modal-label,
 .modal-input,
@@ -231,6 +236,8 @@ button-modal-close:focus {
   text-align: center;
   letter-spacing: 0.03em;
 
+  position: relative;
+
   color: #212121;
 
   margin-bottom: 12px;
@@ -252,6 +259,7 @@ button-modal-close:focus {
   letter-spacing: 0.06em;
 }
 .modal-button {
+  position: relative;
   display: block;
   text-align: center;
   margin-left: auto;
@@ -269,6 +277,7 @@ button-modal-close:focus {
   margin-bottom: 10px;
 }
 .modal-field-area {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -321,6 +330,7 @@ button-modal-close:focus {
 }
 .folow-input {
   padding: 15px 0px 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .folow-input {
@@ -383,6 +393,7 @@ button-modal-close:focus {
 }
 
 .modal-check-box {
+  position: relative;
   margin-bottom: 30px;
   padding-left: 13px;
 }
@@ -444,7 +455,7 @@ button-modal-close:focus {
 }
 .hero-button {
   /*margin-bottom: 200px;*/
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
@@ -667,6 +678,17 @@ nav-item {
   transition: color 250ms var(--timing-function);
 }
 
+.nav-link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  opacity: 1;
+}
 .nav-link::after {
   content: "";
   position: absolute;
@@ -680,6 +702,7 @@ nav-item {
   transition: opacity 250ms var(--timing-function);
   transition: width 250ms var(--timing-function);
 }
+
 .nav-link:hover::after {
   opacity: 1;
   width: 100%;
